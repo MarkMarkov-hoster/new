@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="mailru-domain" content="vO0QAeNfQPh3IHFC" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Организация Citadelebank</title>
+    <style>
+        /* Основные стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1b29;
+            color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Занимаем 100% высоты окна */
+            overflow: hidden; /* Убираем прокрутку */
+        }
+        /* Фон */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('123123.gif') no-repeat center center fixed;
+            background-size: cover;
+            z-index: -1;
+            opacity: 0.3; /* Более приглушенный фон */
+        }
+        /* Навигация */
+        .nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(28, 27, 41, 0.95);
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .nav-button {
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            cursor: pointer;
+            background-color: #E10613;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .nav-button:hover, .nav-button.active {
+            background-color: #bf0511;
+            transform: scale(1.1);
+        }
+        /* Структура секций */
+        .section {
+            height: 100vh; /* Каждая секция занимает 100% высоты */
+            display: none; /* Скрываем все секции по умолчанию */
+            flex-direction: column;
+            justify-content: center; /* Центрируем содержимое вертикально */
+            align-items: center; /* Центрируем содержимое горизонтально */
+            padding: 30px;
+            text-align: center;
+        }
+        .section.active {
+            display: flex; /* Показываем только активную секцию */
+        }
+        /* Заголовок */
+        h1 {
+            color: #E10613;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #E10613;
+            font-size: 2em;
+            margin: 15px 0;
+        }
+        .content-card {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            max-width: 600px; /* Максимальная ширина карточки */
+            width: 100%; /* Ширина карточки по размеру контейнера */
+        }
+        .content-card p {
+            margin: 5px 0;
+        }
+        .contact-info {
+            margin-top: 10px;
+        }
+        ul {
+            list-style-type: none; /* Убираем стандартные маркеры списка */
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <span class="nav-button active" onclick="showSection('home')">Главная</span>
+        <span class="nav-button" onclick="showSection('about')">О нас</span>
+        <span class="nav-button" onclick="showSection('services')">Услуги</span>
+        <span class="nav-button" onclick="showSection('contracts')">Контракты</span>
+        <span class="nav-button" onclick="showSection('team')">Команда</span>
+        <span class="nav-button" onclick="showSection('testimonials')">Отзывы</span>
+        <span class="nav-button" onclick="showSection('contacts')">Контакты</span>
+    </div>
+
+    <!-- Главная секция -->
+    <div id="home" class="section active">
+        <h1>Организация Citadelebank</h1>
+        <p>Здесь мы создаем возможности и поддерживаем друг друга.</p>
+
+        <div class="content-card">
+            <h2>Руководство</h2>
+            <p><strong>Главный:</strong> Luca Okochev</p>
+            <p><strong>Заместители:</strong></p>
+            <ul>
+                <li>Garik Okochev</li>
+                <li>Kai Okochev</li>
+                <li>Mice Okochev</li>
+                <li>Nikolay Zubenko</li>
+                <li><strong>Впринцепе тоже зам:</strong> Yuto Okochev</li> <!-- Добавлен новый контрактник -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Секция "О нас" -->
+    <div id="about" class="section">
+        <h2>О нас</h2>
+        <div class="content-card">
+            <p>Мы команда профессионалов, стремящихся к успеху и инновациям в мире финансов. Наша цель — предоставление наилучших решений для наших клиентов и создание среды, где каждый может раскрыть свой потенциал.</p>
+        </div>
+    </div>
+
+    <!-- Секция "Услуги" -->
+    <div id="services" class="section">
+        <h2>Услуги</h2>
+        <div class="content-card">
+            <p><strong>Консультации:</strong> Предоставляем экспертные консультации по финансовым вопросам.</p>
+        </div>
+        <div class="content-card">
+            <p><strong>Управление активами:</strong> Эффективное управление инвестициями и активами клиентов.</p>
+        </div>
+        <div class="content-card">
+            <p><strong>Анализ рынка:</strong> Глубокий анализ рынка для выявления выгодных возможностей.</p>
+        </div>
+        <div class="content-card">
+            <p><strong>Финансовое планирование:</strong> Помогаем создавать устойчивые финансовые планы для достижения целей.</p>
+        </div>
+    </div>
+
+    <!-- Секция "Контракты" -->
+    <div id="contracts" class="section">
+        <h2>Контракты</h2>
+        <div class="content-card">
+            <p><strong>Схемы:</strong> Разработка и координация сложных финансовых и корпоративных схем.</p>
+        </div>
+        <div class="content-card">
+            <p><strong>Мясо:</strong> Специальные контракты для поставки первоклассного товара.</p>
+        </div>
+        <div class="content-card">
+            <p><strong>Мусор:</strong> Контроль за отходами и переработка ресурсов для нужд города.</p>
+        </div>
+        <div class="content-card">
+            <p><strong>Ловля рыбы:</strong> Контракты на снабжение морепродуктами и рыболовство.</p>
+        </div>
+    </div>
+
+    <!-- Секция "Команда" -->
+    <div id="team" class="section">
+        <h2>Наша команда</h2>
+        <div class="content-card">
+            <p>Наша команда состоит из высококвалифицированных специалистов, каждый из которых вносит свой уникальный вклад в общую цель.</p>
+            <ul>
+                <li><strong>Luca Okochev:</strong> Главный, стратегическое руководство.</li>
+                <li><strong>Garik Okochev:</strong> Заместитель, координация операций.</li>
+                <li><strong>Kai Okochev:</strong> Финансовый аналитик, исследование рынков.</li>
+                <li><strong>Mice Okochev:</strong> Управление проектами, реализация решений.</li>
+                <li><strong>Nikolay Zubenko:</strong> Специалист по контрактам, переговоры и заключение сделок.</li>
+                <li><strong>Yuto Okochev:</strong> работа с клиентами и договоры.</li> <!-- Добавлен контрактник в команду -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Секция "Контакты" -->
+    <div id="contacts" class="section">
+        <h2>Контакты</h2>
+        <div class="content-card contact-info">
+            <p><strong>Офис:</strong> Аркадиус</p>
+            <p><strong>Discord:</strong> @kaneoxgod</p>
+            <p>Для получения дополнительной информации свяжитесь с нами в Discord или по указанному адресу.</p>
+        </div>
+    </div>
+   <!-- Секция "Отзывы" -->
+    <div id="testimonials" class="section">
+        <h2>Отзывы клиентов</h2>
+        <div class="content-card">
+            <p>Жаль но их нету.</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Функция для показа нужной секции
+        function showSection(sectionId) {
+            // Скрываем все секции и удаляем активный класс с кнопок
+            document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
+            document.querySelectorAll('.nav-button').forEach(button => button.classList.remove('active'));
+
+            // Показываем выбранную секцию и активируем соответствующую кнопку
+            document.getElementById(sectionId).classList.add('active');
+            document.querySelector(`.nav-button[onclick="showSection('${sectionId}')"]`).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
